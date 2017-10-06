@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# DailyPotato
+A Ruby on Rails project: Generate a Daily Potato
+
