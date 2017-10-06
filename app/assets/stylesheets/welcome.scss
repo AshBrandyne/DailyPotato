@@ -1,0 +1,43 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body { 
+  background: url(background1.png) no-repeat center fixed; 
+  background-color: #FFFFFF;
+  background-size: cover;
+}
+
+#button {
+  background: #bf1c1c;
+  background-image: -webkit-linear-gradient(top, #bf1c1c, #700a0a);
+  background-image: -moz-linear-gradient(top, #bf1c1c, #700a0a);
+  background-image: -ms-linear-gradient(top, #bf1c1c, #700a0a);
+  background-image: -o-linear-gradient(top, #bf1c1c, #700a0a);
+  background-image: linear-gradient(to bottom, #bf1c1c, #700a0a);
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  -webkit-box-shadow: 0px 9px 5px #3d3a3a;
+  -moz-box-shadow: 0px 9px 5px #3d3a3a;
+  box-shadow: 0px 9px 5px #3d3a3a;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 33px;
+  padding: 40px 28px 40px 28px;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#button:hover {
+  background: #ff5757;
+  background-image: -webkit-linear-gradient(top, #ff5757, #b80b0b);
+  background-image: -moz-linear-gradient(top, #ff5757, #b80b0b);
+  background-image: -ms-linear-gradient(top, #ff5757, #b80b0b);
+  background-image: -o-linear-gradient(top, #ff5757, #b80b0b);
+  background-image: linear-gradient(to bottom, #ff5757, #b80b0b);
+  text-decoration: none;
+}
+
+
