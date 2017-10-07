@@ -1,0 +1,24 @@
+<p>
+
+	
+<div class="potatoes-wrapper row">
+  <div class="potato">
+    <div class="potato-head">
+      <div class="name">
+        <td>Name: <%= @potato.name %></td><br>
+      </div>
+    </div>
+    <div class="image center-block">
+      Potato goes here!
+      <%= @potato.eyes %>
+      <%= @potato.mouth %>
+    </div>
+    <p class="desc">
+      <%= @potato.desc %>
+    </p>
+    <div class="text-center">
+      <%= link_to "Cancel", welcome_home_path %>
+    </div>
+  </div>
+</div>
+
