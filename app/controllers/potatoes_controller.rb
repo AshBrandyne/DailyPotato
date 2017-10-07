@@ -1,0 +1,2 @@
+class PotatoesController < ApplicationController
+end
