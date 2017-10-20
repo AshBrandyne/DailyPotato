@@ -1,0 +1,50 @@
+current directory: C:/2017Ruby/dailypotato/vendor/bundle/jruby/2.3.0/gems/sqlite3-1.3.13/ext/sqlite3
+C:/jruby-9.1.8.0/bin/jruby.exe -r ./siteconf20171008-13292-1u3q4hb.rb extconf.rb
+checking for sqlite3.h... RuntimeError: The compiler failed to generate an executable file.
+You have to install development tools first.
+
+                 try_do at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:456
+                try_cpp at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:587
+   block in find_header at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:1144
+  block in checking_for at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:942
+      block in postpone at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:350
+                   open at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:320
+      block in postpone at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:350
+                   open at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:320
+               postpone at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:346
+           checking_for at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:941
+            find_header at C:/jruby-9.1.8.0/lib/ruby/stdlib/mkmf.rb:1143
+                 <main> at extconf.rb:50
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=C:/jruby-9.1.8.0/bin/jruby
+	--with-sqlite3-config
+	--without-sqlite3-config
+	--with-pkg-config
+	--without-pkg-config
+	--with-sqlite3-dir
+	--without-sqlite3-dir
+	--with-sqlite3-include
+	--without-sqlite3-include=${sqlite3-dir}/include
+	--with-sqlite3-lib
+	--without-sqlite3-lib=${sqlite3-dir}/lib
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  C:/2017Ruby/dailypotato/vendor/bundle/jruby/2.3.0/extensions/universal-java-1.8/2.3.0/sqlite3-1.3.13/mkmf.log
+
+extconf failed, exit code 1
