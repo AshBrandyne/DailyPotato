@@ -1,12 +1,15 @@
 <!-- This is the Home Page
 	Display a Button in the middle 
 	On user button press, execute some erb -->
+<html>
 <body>
-
+	
 <center><div id="button">Grant me this day my DAILY POTATO</div></center>
+
 
 <p></p>
 
-<%= image_tag("trumpet.png", :alt => "trumpet") %>
+<%= link_to image_tag("trumpet.png", :alt => "trumpet"), potatoes_path %>
 
 </body>
+</html>
