@@ -1,7 +1,15 @@
-
+<% require 'PotatoCreator'%>
+<% require 'PotatoDetail' %>
 <h1>New Potato</h1>
 
-<%= image_tag("body/1.png", alt: 'potato body', size: "442x598", id: 'body') %>
+<% creator = PotatoCreator.new %>
+<% creator.create_potato %>
+<% potato = creator.potato %>
+<% body = potato.body %>
+Hello: <%= body %>
+
+
+<%= image_tag("body/#{body}.png", alt: 'potato body', size: "442x598", id: 'body') %>
 <%= image_tag("eyes/1.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
 
 <%= form_with scope: :potato, url: potatoes_path, local: true do |form| %>

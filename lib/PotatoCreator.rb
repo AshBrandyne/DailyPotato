@@ -6,6 +6,10 @@ class PotatoCreator
   # read from the CSV
   # create random Potato & set attributes of new Potato
   # return the Potato
+  
+  # Potato object to be returned
+  attr_accessor :potato
+  
   def create_potato
     # random index to pull a row from the CSV
     index = random_index
@@ -36,12 +40,10 @@ class PotatoCreator
     body = year % 3
     eyes = coord % 3
     mouth = value % 3
-    potato = PotatoDetail.new(body, eyes, mouth)
-    
-    
-    puts potato
+    @potato = PotatoDetail.new(body, eyes, mouth)
     
   end
+  
   
   # return a random int to be used to grab a random line 
   # from the CSV file (between 0 and 6484)
@@ -53,7 +55,8 @@ class PotatoCreator
   def save_to_db
     
   end
+  
+
 end
 
-creator = PotatoCreator.new
-creator.create_potato
+

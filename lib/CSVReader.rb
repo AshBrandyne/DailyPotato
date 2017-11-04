@@ -13,7 +13,7 @@ class CSVReader
   # readFile returns a 2-dimensional array, where every row 
   # from the CSV file is an element within the array
   def read_file 
-    arr_of_spuds = CSV.read("../00010014-eng.csv")
+    arr_of_spuds = CSV.read("./00010014-eng.csv")
   end
   
 end
