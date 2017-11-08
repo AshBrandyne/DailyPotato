@@ -7,6 +7,9 @@ class PotatoesController < ApplicationController
     @all_potatoes.each do |potato|
       puts "Name: #{potato.name}"
       puts "Description: #{potato.desc}"
+      puts "Body: #{potato.body}"
+      puts "Mouth: #{potato.mouth}"
+      puts "Eyes: #{potato.eyes}"
     end
   end
   
@@ -31,6 +34,6 @@ class PotatoesController < ApplicationController
   # Defines the data accepted as params in the potato form
   private
     def potato_params
-      params.require(:potato).permit(:name, :desc)
+      params.require(:potato).permit(:name, :desc, :body, :eyes, :mouth)
     end
 end

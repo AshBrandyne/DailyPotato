@@ -1,23 +1,6 @@
 
-<h1>New Potato</h1>
 
-
-
-<%= image_tag("body/1.png", alt: 'potato body', size: "442x598", id: 'body') %>
-<%= image_tag("eyes/1.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
-
-<%= form_with scope: :potato, url: potatoes_path, local: true do |form| %>
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
- 
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :desc %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
+<% @all_potatoes.each do |potate| %>
+    potate
 <% end %>
+

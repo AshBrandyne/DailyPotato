@@ -38,8 +38,8 @@ class PotatoCreator
     # set the accessories: just random? based on Province? 
     # TODO: Randomize the name and crap like that. Change values based on number!
     body = year % 3
-    eyes = coord % 3
-    mouth = value % 3
+    eyes = coord % 4
+    mouth = value % 2
     @potato = PotatoDetail.new(body, eyes, mouth)
     
   end

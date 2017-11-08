@@ -9,10 +9,18 @@
       </div>
     </div>
     <div class="image center-block">
-    	<%= image_tag "body/1.png" %>
-      Potato goes here!
-      <%= @potato.eyes %>
-      <%= @potato.mouth %>
+    	
+<% body = @potato.body %>
+<% eyes = @potato.eyes %>
+<% mouth = @potato.mouth %>
+
+Hello: <%= body %>
+
+<%= image_tag("body/#{body}.png", alt: 'potato body', size: "442x598", id: 'body') %>
+<%= image_tag("eyes/#{eyes}.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
+<%= image_tag("mouth/#{mouth}.png", alt: 'potato mouth', size: "320x266", id: 'mouth') %>
+     
+      
     </div>
     <p class="desc">
       <%= @potato.desc %>

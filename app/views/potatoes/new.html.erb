@@ -6,14 +6,20 @@
 <% creator.create_potato %>
 <% potato = creator.potato %>
 <% body = potato.body %>
+<% mouth = potato.mouth %>
+<% eyes = potato.eyes %>
 Hello: <%= body %>
 
 
 <%= image_tag("body/#{body}.png", alt: 'potato body', size: "442x598", id: 'body') %>
-<%= image_tag("eyes/4.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
-<%= image_tag("mouth/0.png", alt: 'potato mouth', size: "320x266", id: 'mouth') %>
+<%= image_tag("eyes/#{eyes}.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
+<%= image_tag("mouth/#{mouth}.png", alt: 'potato mouth', size: "320x266", id: 'mouth') %>
 
 <%= form_with scope: :potato, url: potatoes_path, local: true do |form| %>
+  
+  <%= form.hidden_field :body, :value => body %>
+  <%= form.hidden_field :mouth, :value => mouth %>
+  <%= form.hidden_field :eyes, :value => eyes %>
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
@@ -23,7 +29,8 @@ Hello: <%= body %>
     <%= form.label :description %><br>
     <%= form.text_area :desc %>
   </p>
- 
+ 	
+ 	
   <p>
     <%= form.submit %>
   </p>
