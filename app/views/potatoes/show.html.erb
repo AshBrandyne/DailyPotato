@@ -1,25 +1,46 @@
+<!-- 
+	Show.html.erb
+	
+	View for the Show action from potato controller
+	User is routed to this page after clicking Submit on the New Potato form
+	
+	User is routed here to view the Name and Description of their new Potato
+	User is routed to welcome/home after clicking Cancel
+	
+	A new feature will be for the user to See Gallery to view all potatoes
+	
+	Author: Ash-Lee Hommy 040840815
+	Nov 1st, 2017	
+	
+	-->
 <p>
-
 	
 <div class="potatoes-wrapper row">
   <div class="potato">
     <div class="potato-head">
       <div class="name">
-        <td>Name: <%= @potato.name %></td><br>
+        <td>Name: <%= @potato.name %></td><br> <!-- Display the name of the potato -->
       </div>
     </div>
     <div class="image center-block">
-    	<%= image_tag "body/1.png" %>
-      Potato goes here!
-      <%= @potato.eyes %>
-      <%= @potato.mouth %>
+    	
+<!-- Get the attributes from the saved potato in ERB --> 	
+<% body = @potato.body %>
+<% eyes = @potato.eyes %>
+<% mouth = @potato.mouth %>
+
+<!-- Use the above attributes to set the images for the potato -->
+<%= image_tag("body/#{body}.png", alt: 'potato body', size: "442x598", id: 'body') %>
+<%= image_tag("eyes/#{eyes}.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
+<%= image_tag("mouth/#{mouth}.png", alt: 'potato mouth', size: "320x266", id: 'mouth') %>
+     
+<!-- Display the description and allow user to navigate Home using the Cancel hyperlink -->  
     </div>
     <p class="desc">
-      <%= @potato.desc %>
+      Description: <%= @potato.desc %>
     </p>
     <div class="text-center">
       <%= link_to "Cancel", welcome_home_path %>
     </div>
   </div>
 </div>
-

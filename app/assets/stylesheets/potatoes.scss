@@ -1,6 +1,10 @@
-// Place all the styles related to the Potatoes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Potatoes CSS for styling images on all potato pages
+// Author: Ash-Lee Hommy 040840815
+// Nov 1st, 2017
+
+
+// Sets position of potato body
 img#body
 {
     position:absolute;
@@ -8,9 +12,18 @@ img#body
     left: 200px;
 }
 
+// Sets position of eyes in relation to potato
 img#eyes
 {
     position:absolute;
     top: 200px;
     left: 240px;
+}
+
+// Sets position of mouth in relation to potato
+img#mouth
+{
+    position:absolute;
+    top: 340px;
+    left: 260px;
 }

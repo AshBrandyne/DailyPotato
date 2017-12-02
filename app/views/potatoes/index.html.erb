@@ -1,21 +1,21 @@
-
-<h1>New Potato</h1>
-
-<%= image_tag("body/1.png", alt: 'potato body', size: "442x598", id: 'body') %>
-<%= image_tag("eyes/1.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
-
-<%= form_with scope: :potato, url: potatoes_path, local: true do |form| %>
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
- 
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :desc %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
+<!-- 
+	Index.html.erb
+	
+	This is not fully implemented - will be a Gallery of all the potatoes in the database
+	Right now it is passed the variable "@all_potatoes" from the controller which holds every row in the Potatoes database table
+	
+	Simply prints the value of each Potato to the screen
+	
+	Author: Ash-Lee Hommy 040840815
+	Nov 1st, 2017	
+	
+	-->
+<% @all_potatoes.each do |potato| %>
+    Name: <%= potato.name %> <br>
+    Description: <%= potato.desc %> <br>
+    Body: <%= potato.body %> <br>
+    Mouth: <%= potato.mouth %> <br>
+    Eyes: <%= potato.eyes %> <br>
+    <p>   
 <% end %>
+
