@@ -1,13 +1,15 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Welcome CSS for styling images for background and index pages
+// Author: Ash-Lee Hommy 040840815
+// Nov 1st, 2017
 
+// Styling for background (body)
 body { 
   background: url(background1.png) no-repeat center fixed; 
   background-color: #FFFFFF;
   background-size: cover;
 }
 
+// Styling for the button (to be altered)
 #button {
   background: #bf1c1c;
   background-image: -webkit-linear-gradient(top, #bf1c1c, #700a0a);
@@ -30,6 +32,7 @@ body {
   text-align: center;
 }
 
+// On hover of button
 #button:hover {
   background: #ff5757;
   background-image: -webkit-linear-gradient(top, #ff5757, #b80b0b);

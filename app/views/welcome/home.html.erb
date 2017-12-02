@@ -1,14 +1,22 @@
-<!-- This is the Home Page
-	Display a Button in the middle 
-	On user button press, execute some erb -->
+<!-- 
+	Home.html.erb
+	
+	This is the Home page, the first page the user is displayed
+	User clicks a button (a trumpet at the moment) "Grant me this day my daily potato"
+	User is routed to new.html.erb and displayed a random potato
+	
+	Author: Ash-Lee Hommy 040840815
+	Nov 1st, 2017	
+	
+	-->
 <html>
 <body>
 	
 <center><div id="button">Grant me this day my DAILY POTATO</div></center>
 
-
 <p></p>
 
+<!-- Trumpet routes user to create a new potato -->
 <%= link_to image_tag("trumpet.png", :alt => "trumpet"), new_potato_path %>
 
 </body>
