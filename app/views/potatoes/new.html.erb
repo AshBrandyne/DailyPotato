@@ -1,20 +1,49 @@
+<!-- 
+	New.html.erb
+	
+	View for the New action from potato controller
+	User is routed to this page after clicking the "Grant me this day my Daily Potato" button
+	
+	A new PotatoCreator is created which reads from the CSV file and randomly generates attributes for the potato
+	The potato is displayed to the user 
+	The user enters a Name and Description and clicks "Submit" to save the Potato to the database
+	User is routed to potatoes/show.html.erb
+	
+	Author: Ash-Lee Hommy 040840815
+	Nov 1st, 2017	
+	
+	-->
+
 <% require 'PotatoCreator'%>
 <% require 'PotatoDetail' %>
+
 <h1>New Potato</h1>
 
+<!-- 
+	Create a new random potato in ERB
+	Creates a new PotatoCreator, which reads from CSV file and sets 
+	attributes of new PotatoDetail.
+	These attributes are used to set the image attributes of the potato
+	-->
 <% creator = PotatoCreator.new %>
 <% creator.create_potato %>
 <% potato = creator.potato %>
 <% body = potato.body %>
 <% mouth = potato.mouth %>
 <% eyes = potato.eyes %>
-Hello: <%= body %>
 
-
+<!-- 
+	Image tags for the potato's body, eyes and mouth
+	-->
 <%= image_tag("body/#{body}.png", alt: 'potato body', size: "442x598", id: 'body') %>
 <%= image_tag("eyes/#{eyes}.png", alt: 'potato eyes', size: "372x127", id: 'eyes') %>
 <%= image_tag("mouth/#{mouth}.png", alt: 'potato mouth', size: "320x266", id: 'mouth') %>
 
+<!-- 
+	Form for the user to enter the potato's Name and Description
+	
+	These attributes are sent via parameters to the Show action when user presses Submit
+	-->
 <%= form_with scope: :potato, url: potatoes_path, local: true do |form| %>
   
   <%= form.hidden_field :body, :value => body %>
@@ -29,7 +58,6 @@ Hello: <%= body %>
     <%= form.label :description %><br>
     <%= form.text_area :desc %>
   </p>
- 	
  	
   <p>
     <%= form.submit %>

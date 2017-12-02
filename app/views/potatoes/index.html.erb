@@ -1,6 +1,21 @@
-
-
-<% @all_potatoes.each do |potate| %>
-    potate
+<!-- 
+	Index.html.erb
+	
+	This is not fully implemented - will be a Gallery of all the potatoes in the database
+	Right now it is passed the variable "@all_potatoes" from the controller which holds every row in the Potatoes database table
+	
+	Simply prints the value of each Potato to the screen
+	
+	Author: Ash-Lee Hommy 040840815
+	Nov 1st, 2017	
+	
+	-->
+<% @all_potatoes.each do |potato| %>
+    Name: <%= potato.name %> <br>
+    Description: <%= potato.desc %> <br>
+    Body: <%= potato.body %> <br>
+    Mouth: <%= potato.mouth %> <br>
+    Eyes: <%= potato.eyes %> <br>
+    <p>   
 <% end %>
 
